@@ -79,7 +79,7 @@ class BST {
             return;
         };
 
-        if (current.val > node.val) { // go left
+        if (current.value > node.value) { // go left
             // check if null and insert
             if (current.left === null) { // <-- base case for inserting left
                 current.left = node;
@@ -88,7 +88,7 @@ class BST {
                 // otherwise recurse left
                 return this.insert(node, current.left); // <-- move current to current.left
             }
-        } else if (current.val < node.val) { // go right
+        } else if (current.value < node.value) { // go right
             // check if null and insert
             if (current.right === null) { // <-- base case for inserting left
                 current.right = node;
@@ -159,7 +159,7 @@ myBST.insert(new BSTNode(20))
 myBST.insert(new BSTNode(15))
 myBST.insert(new BSTNode(7))
 console.log(myBST);
-myBST.minDepth(3);
+console.log(myBST.minDepth(3));
 // myBST.print();
 
 
